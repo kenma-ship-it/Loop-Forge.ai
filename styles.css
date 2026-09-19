@@ -93,10 +93,6 @@ button{font-family:'IBM Plex Sans',sans-serif;cursor:pointer;}
   border-radius: 14px;
   margin-bottom: 22px;
 }
-.lf-fs-success {
-  background: rgba(47, 143, 124, 0.12);
-  border: 1px solid var(--signal-bright);
-}
 .lf-fs-error {
   background: rgba(242, 107, 58, 0.12);
   border: 1px solid var(--forge);
@@ -111,6 +107,82 @@ button{font-family:'IBM Plex Sans',sans-serif;cursor:pointer;}
   opacity: 0.65;
   cursor: not-allowed;
   transform: none !important;
+}
+
+/* Dedicated Success Screen (Full card state matching Image 1 layout) */
+.lf-success-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 20px 40px;
+  min-height: 440px;
+  animation: lfFadeUp 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lfFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.lf-success-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(47, 143, 124, 0.14);
+  border: 1.5px solid rgba(47, 143, 124, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--signal);
+  box-shadow: 0 0 28px rgba(47, 143, 124, 0.2);
+}
+html[data-theme="dark"] .lf-success-icon-wrap {
+  background: rgba(79, 184, 162, 0.16);
+  border-color: rgba(79, 184, 162, 0.45);
+  color: var(--signal-bright);
+  box-shadow: 0 0 32px rgba(79, 184, 162, 0.25);
+}
+
+.lf-success-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.lf-success-desc {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 360px;
+  margin-bottom: 28px;
+}
+
+.lf-success-reset {
+  background: transparent;
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lf-success-reset:hover {
+  border-color: var(--forge);
+  color: var(--forge);
 }
 
 /* nav */

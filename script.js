@@ -88,6 +88,38 @@
     bizInput.addEventListener("input", update);
     needSelect.addEventListener("change", update);
     update();
+
+    // --- Formspree success screen transition & reset ---
+    var formView = document.getElementById("lf-form-view");
+    var successView = document.getElementById("lf-success-view");
+    var resetBtn = document.getElementById("lf-reset-form-btn");
+    var form = document.getElementById("lf-contact-form");
+
+    function showSuccess() {
+      if (formView) formView.style.display = "none";
+      if (successView) successView.style.display = "flex";
+    }
+
+    function showForm() {
+      if (formView) formView.style.display = "block";
+      if (successView) successView.style.display = "none";
+      if (form) form.reset();
+      update();
+    }
+
+    if (successView && formView) {
+      var observer = new MutationObserver(function () {
+        var isVisible = successView.style.display !== "none" && !successView.hasAttribute("hidden");
+        if (isVisible && formView.style.display !== "none") {
+          showSuccess();
+        }
+      });
+      observer.observe(successView, { attributes: true, attributeFilter: ["style", "class", "hidden"] });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", showForm);
+    }
   }
 
   initTheme();

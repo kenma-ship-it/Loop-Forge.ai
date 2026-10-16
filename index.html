@@ -2,549 +2,884 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Loopforge — AI Voice Agents &amp; Website Design for Small Business | India &amp; Worldwide</title>
-<meta name="description" content="Loopforge builds AI voice agents that answer calls and book appointments for clinics, gyms and salons, and websites for small businesses — affordable pricing in India (Rs) and worldwide ($). Free consultation.">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Booking Websites, WhatsApp Bots &amp; Voice Agents | Loopforge</title>
+<meta name="description" content="Loopforge builds booking systems for clinics and local businesses: websites with slot booking, WhatsApp chatbots and AI voice agents. India and worldwide.">
+<link rel="canonical" href="https://loopforge.ai/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#ECEEF1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121419" media="(prefers-color-scheme: dark)">
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="Loopforge — AI Voice Agents &amp; Website Design for Small Business">
-<meta property="og:description" content="AI voice agents for appointment booking, and websites for small business. Affordable pricing for India and worldwide clients.">
-<meta property="og:image" content="images/logo.png">
+<meta property="og:site_name" content="Loopforge">
+<meta property="og:url" content="https://loopforge.ai/">
+<meta property="og:title" content="Loopforge: booking systems for clinics and local businesses">
+<meta property="og:description" content="AI voice agents that answer calls and book appointments for clinics, gyms and salons, plus websites and WhatsApp chatbots. India and worldwide.">
+<meta property="og:image" content="https://loopforge.ai/images/logo.png">
+<meta property="og:image:alt" content="Loopforge logo">
+<meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Loopforge — AI Voice Agents &amp; Website Design">
-<meta name="twitter:description" content="AI voice agents for appointment booking, and websites for small business. Affordable pricing for India and worldwide.">
-<link rel="icon" href="images/logo.png">
+<meta name="twitter:title" content="Loopforge: booking systems for clinics and local businesses">
+<meta name="twitter:description" content="AI voice agents that answer calls and book appointments for small businesses. India and worldwide.">
+<meta name="twitter:image" content="https://loopforge.ai/images/logo.png">
+
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Set theme before paint to avoid a flash.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("loopforge-theme"); } catch (e) {}
+    if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");
+  })();
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Loopforge",
-  "description": "AI voice agents for appointment booking and websites for small businesses, serving clients in India and worldwide.",
-  "email": "work23aryan@gmail.com",
-  "telephone": "+91-9619344081",
-  "areaServed": ["IN", "Worldwide"],
-  "priceRange": "Rs999 - Rs34999 / $99 - $799",
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Voice Agent for Appointment Booking" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Design for Small Business" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp Business Chatbot" } }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://loopforge.ai/#org",
+      "name": "Loopforge",
+      "url": "https://loopforge.ai/",
+      "logo": "https://loopforge.ai/images/logo.png",
+      "email": "work23aryan@gmail.com",
+      "telephone": "+91-9619344081",
+      "description": "Loopforge is an India-based studio that builds AI voice agents for appointment booking, websites, and WhatsApp Business chatbots for small businesses worldwide.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "work23aryan@gmail.com",
+          "telephone": "+91-9619344081",
+          "availableLanguage": [
+            "English",
+            "Hindi"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "name": "WhatsApp",
+          "telephone": "+91-9137161472",
+          "url": "https://wa.me/919137161472",
+          "availableLanguage": [
+            "English",
+            "Hindi"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://loopforge.ai/#website",
+      "url": "https://loopforge.ai/",
+      "name": "Loopforge",
+      "publisher": {
+        "@id": "https://loopforge.ai/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://loopforge.ai/#service",
+      "name": "Loopforge",
+      "url": "https://loopforge.ai/",
+      "image": "https://loopforge.ai/images/logo.png",
+      "email": "work23aryan@gmail.com",
+      "telephone": "+91-9619344081",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "India"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "https://loopforge.ai/#org"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Loopforge services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI voice agent for appointment booking",
+              "serviceType": "AI phone answering and appointment booking",
+              "description": "An AI phone agent that answers calls 24/7, books, reschedules and cancels appointments in your calendar, and sends SMS or WhatsApp reminders."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website design for small business",
+              "serviceType": "Web design",
+              "description": "Custom, mobile-first websites with clear services, booking or enquiry forms, and on-page SEO."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "WhatsApp Business chatbot",
+              "serviceType": "Chatbot",
+              "description": "Automated WhatsApp replies, catalog browsing and in-chat booking, with handoff to a person."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loopforge.ai/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AI voice agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI voice agent is software that answers your business phone in a natural voice. A Loopforge agent picks up every call, day or night, answers common questions about hours, services and pricing, books, reschedules or cancels appointments directly in your calendar, and sends the caller an SMS or WhatsApp confirmation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an AI voice agent cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every plan is quoted individually after a free consultation. Voice agents run on a monthly subscription that covers the calling platform the agent runs on, billed to you directly. Each plan includes a monthly call allowance sized to your call volume. If you go over it, calls go to voicemail instead of being billed extra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to go live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most projects go live in about two weeks. A starter website usually takes 5 to 7 days, and a voice agent or WhatsApp chatbot takes 1 to 3 weeks, depending on how quickly content and feedback come back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which businesses is Loopforge built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appointment-driven small businesses: clinics, dentists, gyms, salons, spas, studios and local service businesses. Recent projects include three dental clinics in Mumbai and Navi Mumbai, a dessert café with online ordering, a bagel chain and a Mexican restaurant in the US, and a Houston realtor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses outside India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Loopforge is based in India and works with clients worldwide, including live websites for businesses in Texas, Alabama and Louisiana. Indian clients are quoted in rupees with GST where applicable; international clients are quoted in US dollars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the voice agent speak more than one language?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Multi-language calling is included in the Multi-location voice agent plan, and the Advanced WhatsApp chatbot plan supports multiple languages too."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns the website or agent once it is built?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do. Once a project is paid in full, ownership of the website files, voice agent configuration or chatbot flow transfers to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I contact Loopforge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email work23aryan@gmail.com, call +91 96193 44081, or message us on WhatsApp at +91 91371 61472. You can also use the form on this page to request a free 20-minute consultation. We reply within a day."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://loopforge.ai/#projects",
+      "name": "Loopforge live projects",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebSite",
+            "name": "DE.25 by Harshali",
+            "url": "https://online-cake-deliver.vercel.app/",
+            "description": "Online ordering website for a dessert café in Ghansoli, Navi Mumbai.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebSite",
+            "name": "Shug's Bagels",
+            "url": "https://shugs-bagels-psi.vercel.app/",
+            "description": "Multi-location ordering website for a bagel chain in Dallas, Austin and New Orleans.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebSite",
+            "name": "Smile Arc Dental Care",
+            "url": "https://smile-arc-dental-care.vercel.app/",
+            "description": "Dental clinic website with slot booking in Kalachowki, Mumbai.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebSite",
+            "name": "Nova Dental Care & Implant Centre",
+            "url": "https://nova-dental-care-implant-centre-three.vercel.app/",
+            "description": "Dental and implant clinic website with slot booking in Kandivali East, Mumbai.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "WebSite",
+            "name": "Dr. Neil's Dental Studio",
+            "url": "https://dr-neil-five.vercel.app/",
+            "description": "Dental studio website with slot booking in Ghansoli, Navi Mumbai.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "WebSite",
+            "name": "Mexico Típico",
+            "url": "https://mexico-tipico.vercel.app/",
+            "description": "Restaurant website with reservations for a Mexican restaurant in Prattville, Alabama.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "WebSite",
+            "name": "Don Ngo, Realtor",
+            "url": "https://don-ngo.vercel.app/",
+            "description": "Personal website for a Houston real estate agent.",
+            "creator": {
+              "@id": "https://loopforge.ai/#org"
+            }
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<header class="lf-nav">
-  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:76px;">
-    <a href="#top" style="display:flex;align-items:center;gap:12px;">
-      <img src="images/logo.png" alt="Loopforge" width="36" height="36" style="border-radius:9px;">
-      <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:var(--ink);">loopforge</span>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Loopforge home">
+      <img src="images/logo.png" alt="" width="32" height="32">
+      loopforge
     </a>
-    <nav class="lf-nav-links" aria-label="Primary" style="display:flex;align-items:center;gap:36px;">
-      <a href="#services" class="lf-navlink" style="font-size:15px;font-weight:500;">Services</a>
-      <a href="#pricing" class="lf-navlink" style="font-size:15px;font-weight:500;">Pricing</a>
-      <a href="#work" class="lf-navlink" style="font-size:15px;font-weight:500;">Work</a>
-      <a href="#contact" class="lf-navlink" style="font-size:15px;font-weight:500;">Contact</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#pricing">Plans</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
     </nav>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <button type="button" id="lf-theme-toggle" class="lf-theme-toggle" aria-label="Toggle dark mode">
-        <svg class="lf-icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.5" stroke="var(--ink)" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <svg class="lf-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z" fill="var(--ink)"/></svg>
+    <div class="nav-actions">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch light or dark theme">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
       </button>
-      <a href="#contact" class="btn btn-forge" style="padding:11px 22px;font-size:14px;">Book a free call</a>
+      <a href="#contact" class="btn btn-small">Book a free call</a>
     </div>
   </div>
 </header>
 
+<main id="main">
+
 <!-- HERO -->
-<section id="top" style="background:var(--ember);position:relative;overflow:hidden;">
-  <div class="wrap lf-hero-grid" style="padding-top:88px;padding-bottom:96px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;">
+<section id="top" class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow" style="margin-bottom:22px;">AI voice agents &amp; websites for small business</p>
-      <h1 style="font-size:clamp(2.1rem,3.6vw + 1rem,3.4rem);line-height:1.06;color:var(--bone);">
-        Missed calls cost you<br>clients. So does a site<br>nobody built for you.
-      </h1>
-      <p style="margin-top:26px;font-size:17px;line-height:1.6;color:var(--bone-soft);max-width:520px;">
-        Loopforge builds AI voice agents that answer, book and remind your clients around the clock — and websites that make a small business look ready for the call it just answered. Priced for teams in India and worldwide.
-      </p>
-      <div style="display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;">
-        <a href="#pricing" class="btn btn-forge">Voice agent pricing</a>
-        <a href="#pricing" class="btn btn-ghost-dark">Website pricing</a>
+      <h1 id="hero-title">Clients book themselves. You keep working.</h1>
+      <p class="hero-lede"><strong>Loopforge builds booking systems for clinics, restaurants and local businesses:</strong> websites with slot booking, WhatsApp chatbots, and AI voice agents that answer the phone and book into the same calendar.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Book a free call</a>
+        <a href="#projects" class="link">See live projects</a>
       </div>
     </div>
-    <div style="display:flex;justify-content:center;">
-      <div style="position:relative;width:min(320px,80vw);aspect-ratio:1;">
-        <div class="lf-spin" style="position:absolute;inset:0;border:1.5px dashed var(--line-dark);border-radius:50%;"></div>
-        <img src="images/logo.png" alt="" style="position:absolute;inset:14%;width:72%;height:72%;border-radius:26px;object-fit:contain;box-shadow:0 40px 80px -20px rgba(0,0,0,0.55);">
+
+    <figure>
+      <div class="call" role="img" aria-labelledby="call-desc">
+        <div class="call-head">
+          <div class="call-who">
+            <div class="call-avatar" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+            </div>
+            <div>
+              <p class="call-name">Gym front desk</p>
+              <p class="call-status"><span class="dot"></span>Answered by the agent</p>
+            </div>
+          </div>
+          <span class="call-timer" id="call-timer" aria-hidden="true">00:00</span>
+        </div>
+        <ol class="call-log" id="call-log">
+          <li class="call-line caller"><span class="who">Caller</span><p>Hi, do you have trial classes this week?</p></li>
+          <li class="call-line agent"><span class="who">Agent</span><p>We do. There's a free strength trial Thursday at 7 pm, or Saturday at 10 am. Which suits you?</p></li>
+          <li class="call-line caller"><span class="who">Caller</span><p>Thursday works. It's Rohan.</p></li>
+          <li class="call-line agent"><span class="who">Agent</span><p>Done, Rohan. You're booked for Thursday at 7 pm. I've sent the details to your phone.</p></li>
+          <li class="call-done">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="m9 16 2 2 4-4" /></svg>
+            <span>Added to the gym's calendar for Thursday, 7:00 pm. Confirmation sent by SMS.</span>
+          </li>
+        </ol>
       </div>
-    </div>
+      <figcaption class="call-caption" id="call-desc">Example: how an agent handles a call for a gym. Question answered, trial booked, confirmation sent.</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background:var(--paper);padding:96px 0;">
+<section id="services" class="section section-alt" aria-labelledby="services-title">
   <div class="wrap">
-    <div style="max-width:600px;margin-bottom:56px;">
-      <p class="eyebrow" style="margin-bottom:14px;">What we build</p>
-      <h2 style="font-size:clamp(1.7rem,2.2vw + 1rem,2.4rem);">Three services. One team that ships fast.</h2>
+    <div class="section-head">
+      <h2 id="services-title">Three things we build, one small team building them.</h2>
+      <p>Most clients start with one and add the others later. Each is built for businesses that live on bookings.</p>
     </div>
-    <div class="lf-service-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
 
-      <div style="background:var(--ember);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:20px;">
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="width:40px;height:40px;border-radius:11px;background:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="#F7F4EC"/></svg>
+    <ul class="services">
+      <li class="service">
+        <div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
           </div>
-          <span class="mono" style="font-size:13px;color:var(--signal-bright);">Service 01</span>
+          <h3>AI voice agent</h3>
         </div>
-        <h3 style="font-size:22px;color:var(--bone);">AI Voice Agent</h3>
-        <p style="color:var(--bone-soft);font-size:14.5px;line-height:1.55;">Never lose a booking to a missed call. Your agent answers every ring, books the appointment, and texts the confirmation.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--bone);"><span style="color:var(--signal-bright);">–</span>Answers calls 24/7, in your business's tone</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--bone);"><span style="color:var(--signal-bright);">–</span>Books, reschedules &amp; cancels in your calendar</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--bone);"><span style="color:var(--signal-bright);">–</span>SMS / WhatsApp reminders to cut no-shows</div>
+        <div class="service-body">
+          <p>Never lose a booking to a missed call. Your agent answers every ring, books the appointment and texts the confirmation.</p>
+          <ul class="ticks">
+            <li>Answers calls 24/7, in your business's tone</li>
+            <li>Books, reschedules and cancels in your calendar</li>
+            <li>SMS and WhatsApp reminders to cut no-shows</li>
+          </ul>
         </div>
-        <p class="mono" style="font-size:12px;color:var(--bone-soft);margin-top:4px;">Built for clinics, dentists, gyms, salons &amp; spas</p>
-        <a href="#pricing" class="btn btn-signal" style="margin-top:8px;align-self:flex-start;font-size:14px;padding:11px 20px;">See voice agent plans</a>
-      </div>
+        <div class="service-for">
+          <p><strong>Built for</strong>Clinics, dentists, gyms, salons and spas</p>
+          <span class="service-links"><a href="#pricing" class="link" data-plan="voice">Voice agent plans</a>
+          <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20an%20AI%20voice%20agent%20for%20my%20business.%20%28from%3A%20Services%29" class="link wa-link" target="_blank" rel="noopener" data-wa="voice"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>Ask on WhatsApp<span class="sr-only"> about the voice agent (opens WhatsApp)</span></a></span>
+        </div>
+      </li>
 
-      <div style="background:var(--card);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:20px;border:1px solid var(--line-light);">
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="width:40px;height:40px;border-radius:11px;background:var(--forge);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#F7F4EC" stroke-width="1.8"/><path d="M3 9h18" stroke="#F7F4EC" stroke-width="1.8"/><circle cx="6.3" cy="6.5" r="0.9" fill="#F7F4EC"/></svg>
+      <li class="service">
+        <div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8" /><path d="M10 19v-3.96 3.15" /><path d="M7 19h5" /><rect width="6" height="10" x="16" y="12" rx="2" /></svg>
           </div>
-          <span class="mono" style="font-size:13px;color:var(--forge-dim);">Service 02</span>
+          <h3>Website design</h3>
         </div>
-        <h3 style="font-size:22px;color:var(--ink);">Website Design</h3>
-        <p style="color:var(--ink-soft);font-size:14.5px;line-height:1.55;">A site that makes a new client trust you before they've even called. Built to load fast and turn a visit into an enquiry.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--forge-dim);">–</span>Custom-designed, mobile-first for your business</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--forge-dim);">–</span>Clear services &amp; a way to book</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--forge-dim);">–</span>Basic on-page SEO, found on Google Maps</div>
+        <div class="service-body">
+          <p>A site that earns a new client's trust before they call. Built to load fast and turn a visit into an enquiry.</p>
+          <ul class="ticks">
+            <li>Custom-designed and mobile-first</li>
+            <li>Clear services and an easy way to book</li>
+            <li>On-page SEO and a Google Maps listing</li>
+          </ul>
         </div>
-        <p class="mono" style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Built for shops, studios, clinics &amp; local services</p>
-        <a href="#pricing" class="btn btn-forge" style="margin-top:8px;align-self:flex-start;font-size:14px;padding:11px 20px;">See website plans</a>
-      </div>
+        <div class="service-for">
+          <p><strong>Built for</strong>Shops, studios, clinics and local services</p>
+          <span class="service-links"><a href="#pricing" class="link" data-plan="web">Website plans</a>
+          <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20booking%20website%20for%20my%20business.%20%28from%3A%20Services%29" class="link wa-link" target="_blank" rel="noopener" data-wa="web"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>Ask on WhatsApp<span class="sr-only"> about the website (opens WhatsApp)</span></a></span>
+        </div>
+      </li>
 
-      <div style="background:var(--card);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:20px;border:1px solid var(--line-light);">
-        <div style="display:flex;align-items:center;gap:12px;">
-          <div style="width:40px;height:40px;border-radius:11px;background:var(--sun);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="#F7F4EC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <li class="service">
+        <div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M8 12h.01" /><path d="M12 12h.01" /><path d="M16 12h.01" /></svg>
           </div>
-          <span class="mono" style="font-size:13px;color:var(--sun-dim);">Service 03</span>
+          <h3>WhatsApp chatbot</h3>
         </div>
-        <h3 style="font-size:22px;color:var(--ink);">WhatsApp Business Chatbot</h3>
-        <p style="color:var(--ink-soft);font-size:14.5px;line-height:1.55;">Answer questions, share your catalog, and take bookings — right inside WhatsApp, where your customers already are.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--sun-dim);">–</span>Instant replies to hours, pricing &amp; FAQs</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--sun-dim);">–</span>Catalog browsing &amp; booking inside chat</div>
-          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink);"><span style="color:var(--sun-dim);">–</span>Hands off to you for anything it can't answer</div>
+        <div class="service-body">
+          <p>Answer questions, share your catalog and take bookings inside WhatsApp, where your customers already are.</p>
+          <ul class="ticks">
+            <li>Instant replies about hours, pricing and FAQs</li>
+            <li>Catalog browsing and booking inside the chat</li>
+            <li>Hands over to you for anything it can't answer</li>
+          </ul>
         </div>
-        <p class="mono" style="font-size:12px;color:var(--ink-soft);margin-top:4px;">Built for shops, salons, clinics &amp; service businesses</p>
-        <a href="#pricing" class="btn btn-sun" style="margin-top:8px;align-self:flex-start;font-size:14px;padding:11px 20px;">See chatbot plans</a>
-      </div>
+        <div class="service-for">
+          <p><strong>Built for</strong>Shops, salons, clinics and service businesses</p>
+          <span class="service-links"><a href="#pricing" class="link" data-plan="chat">Chatbot plans</a>
+          <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20WhatsApp%20chatbot%20for%20my%20business.%20%28from%3A%20Services%29" class="link wa-link" target="_blank" rel="noopener" data-wa="chat"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>Ask on WhatsApp<span class="sr-only"> about the chatbot (opens WhatsApp)</span></a></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
+<!-- PROJECTS -->
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="projects-title">Live projects you can click through.</h2>
+      <p>Seven sites we designed and built for clinics, food businesses and a realtor in India and the US. Every one is live, so open any of them and look around.</p>
+    </div>
+    <div class="projects">
+      <article class="project project-featured">
+        <a class="shot" href="https://online-cake-deliver.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live DE.25 by Harshali website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>online-cake-deliver.vercel.app</span></span>
+          <img src="images/projects/de25-cakes.webp" alt="Homepage of the DE.25 by Harshali website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Dessert café, Navi Mumbai</p>
+          <h3>DE.25 by Harshali</h3>
+          <p>An online ordering site for a cake and dessert café in Ghansoli. Customers browse cakes, pastries, savouries and drinks, check out with a WhatsApp code and track their orders. A built-in food guide answers questions about calories, ingredients and nuts.</p>
+          <ul class="project-tags"><li>Online ordering</li><li>WhatsApp login</li><li>AI food guide</li></ul>
+          <a class="link" href="https://online-cake-deliver.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for DE.25 by Harshali (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://shugs-bagels-psi.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Shug's Bagels website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>shugs-bagels-psi.vercel.app</span></span>
+          <img src="images/projects/shugs-bagels.webp" alt="Homepage of the Shug's Bagels website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Bagel shops, Dallas, Austin and New Orleans</p>
+          <h3>Shug's Bagels</h3>
+          <p>A multi-location site for a New York–style bagel chain. Visitors pick their nearest shop, see its hours, and order pickup or delivery from that shop.</p>
+          <ul class="project-tags"><li>Multi-location</li><li>Pickup and delivery</li></ul>
+          <a class="link" href="https://shugs-bagels-psi.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Shug's Bagels (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://smile-arc-dental-care.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Smile Arc Dental Care website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>smile-arc-dental-care.vercel.app</span></span>
+          <img src="images/projects/smile-arc-dental.webp" alt="Homepage of the Smile Arc Dental Care website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Dental clinic, Kalachowki, Mumbai</p>
+          <h3>Smile Arc Dental Care</h3>
+          <p>A clinic site for Dr. Janhavi Parab with live open-or-closed status, booking by service and a slot picker that shows the week's open times.</p>
+          <ul class="project-tags"><li>Slot booking</li><li>Live clinic hours</li></ul>
+          <a class="link" href="https://smile-arc-dental-care.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Smile Arc Dental Care (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://nova-dental-care-implant-centre-three.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Nova Dental Care & Implant Centre website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>nova-dental-care…vercel.app</span></span>
+          <img src="images/projects/nova-dental.webp" alt="Homepage of the Nova Dental Care & Implant Centre website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Dental clinic, Kandivali East, Mumbai</p>
+          <h3>Nova Dental Care & Implant Centre</h3>
+          <p>Ten treatments, each with its own booking button, plus a slot calendar, patient reviews and plain answers about implants and gum care.</p>
+          <ul class="project-tags"><li>Slot booking</li><li>Treatment pages</li></ul>
+          <a class="link" href="https://nova-dental-care-implant-centre-three.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Nova Dental Care & Implant Centre (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://dr-neil-five.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Dr. Neil's Dental Studio website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>dr-neil-five.vercel.app</span></span>
+          <img src="images/projects/dr-neil-dental.webp" alt="Homepage of the Dr. Neil's Dental Studio website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Dental studio, Ghansoli, Navi Mumbai</p>
+          <h3>Dr. Neil's Dental Studio</h3>
+          <p>Eleven treatments explained in plain language, profiles for both dentists, slot booking, and one-tap call or WhatsApp.</p>
+          <ul class="project-tags"><li>Slot booking</li><li>WhatsApp</li></ul>
+          <a class="link" href="https://dr-neil-five.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Dr. Neil's Dental Studio (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://mexico-tipico.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Mexico Típico website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>mexico-tipico.vercel.app</span></span>
+          <img src="images/projects/mexico-tipico.webp" alt="Homepage of the Mexico Típico website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Mexican restaurant, Prattville, Alabama</p>
+          <h3>Mexico Típico</h3>
+          <p>A restaurant site with menu highlights, table reservations, Google reviews, a map and an FAQ that answers what diners search for.</p>
+          <ul class="project-tags"><li>Reservations</li><li>Menu</li></ul>
+          <a class="link" href="https://mexico-tipico.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Mexico Típico (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project">
+        <a class="shot" href="https://don-ngo.vercel.app/" target="_blank" rel="noopener" aria-label="Open the live Don Ngo, Realtor website (new tab)">
+          <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>don-ngo.vercel.app</span></span>
+          <img src="images/projects/don-ngo-realtor.webp" alt="Homepage of the Don Ngo, Realtor website built by Loopforge" width="1200" height="750" fetchpriority="low" loading="lazy">
+        </a>
+        <div class="project-body">
+          <p class="project-where">Real estate agent, Houston, Texas</p>
+          <h3>Don Ngo, Realtor</h3>
+          <p>A personal site for a RE/MAX of Texas Hall of Fame realtor: services for buyers, sellers, relocating families and investors, 4.9-star Google reviews and consultation booking.</p>
+          <ul class="project-tags"><li>Lead capture</li><li>Reviews</li></ul>
+          <a class="link" href="https://don-ngo.vercel.app/" target="_blank" rel="noopener">Visit live site<svg class="ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg><span class="sr-only"> for Don Ngo, Realtor (opens in a new tab)</span></a>
+        </div>
+      </article>
+    </div>
+    <div class="open-slot">
+      <p class="muted">Want your business to be next? The first call is free.</p>
+      <a href="#contact" class="link">Book a free call</a>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section style="background:var(--ember-2);padding:88px 0;">
+<!-- PROCESS -->
+<section class="section section-alt" aria-labelledby="process-title">
   <div class="wrap">
-    <p class="eyebrow" style="margin-bottom:14px;">How a project runs</p>
-    <h2 style="color:var(--bone);font-size:clamp(1.6rem,2vw + 1rem,2.2rem);margin-bottom:48px;max-width:560px;">From first call to live in about two weeks.</h2>
-    <div class="lf-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;">
-      <div>
-        <p class="mono" style="color:var(--forge);font-size:14px;margin-bottom:14px;">01</p>
-        <h3 style="color:var(--bone);font-size:18px;margin-bottom:10px;">Free consultation</h3>
-        <p style="color:var(--bone-soft);font-size:14.5px;line-height:1.55;">Tell us about your business, your call volume, and what your current site is missing.</p>
-      </div>
-      <div>
-        <p class="mono" style="color:var(--forge);font-size:14px;margin-bottom:14px;">02</p>
-        <h3 style="color:var(--bone);font-size:18px;margin-bottom:10px;">We build</h3>
-        <p style="color:var(--bone-soft);font-size:14.5px;line-height:1.55;">Your voice agent is scripted and trained, or your site is designed — usually in 1 to 3 weeks.</p>
-      </div>
-      <div>
-        <p class="mono" style="color:var(--forge);font-size:14px;margin-bottom:14px;">03</p>
-        <h3 style="color:var(--bone);font-size:18px;margin-bottom:10px;">Test &amp; tune</h3>
-        <p style="color:var(--bone-soft);font-size:14.5px;line-height:1.55;">We run real calls or real users through it and fix the rough edges before anyone else sees it.</p>
-      </div>
-      <div>
-        <p class="mono" style="color:var(--forge);font-size:14px;margin-bottom:14px;">04</p>
-        <h3 style="color:var(--bone);font-size:18px;margin-bottom:10px;">Launch &amp; support</h3>
-        <p style="color:var(--bone-soft);font-size:14.5px;line-height:1.55;">You go live, and we stay on to tune, update and support as your business grows.</p>
-      </div>
+    <div class="section-head">
+      <h2 id="process-title">From first call to live in about two weeks.</h2>
+      <p>You talk to the people who build it, start to finish.</p>
     </div>
+    <ol class="steps">
+      <li><h3>Free consultation</h3><p>Tell us about your business, your call volume and what your current site is missing.</p></li>
+      <li><h3>We build</h3><p>Your agent is scripted and trained, or your site is designed. Usually 1 to 3 weeks.</p></li>
+      <li><h3>Test and tune</h3><p>We run real calls and real visitors through it and fix the rough edges before launch.</p></li>
+      <li><h3>Launch and support</h3><p>You go live, and we stay on to tune, update and support it as you grow.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" style="background:var(--paper);padding:96px 0;">
+<section id="pricing" class="section" aria-labelledby="pricing-title">
   <div class="wrap">
-    <div style="max-width:600px;margin-bottom:16px;">
-      <p class="eyebrow" style="margin-bottom:14px;">Plans</p>
-      <h2 style="font-size:clamp(1.7rem,2.2vw + 1rem,2.4rem);">Built around what your business actually needs.</h2>
-    </div>
-    <p style="color:var(--ink-soft);font-size:14px;margin-bottom:56px;max-width:640px;">We build the entire platform your AI voice agent runs on — the calling infrastructure, the script — and what you pay covers exactly what it runs on, billed to you directly. You can reach out for a free demo before moving forward, and we'll discuss payment once we take you on as a client.</p>
-
-    <!-- Voice agent plans -->
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-      <div style="width:8px;height:8px;border-radius:50%;background:var(--signal);"></div>
-      <h3 style="font-size:19px;">AI Voice Agent — monthly subscription</h3>
-    </div>
-    <p style="color:var(--ink-soft);font-size:13.5px;margin-bottom:24px;">We build and run the entire platform your AI voice agent operates on — that subscription is billed directly to you every month for as long as the agent runs, not hidden in a one-time setup fee. Each plan has a fixed call limit: once it's reached for the month, new calls go to voicemail and outbound calls pause until the next cycle — you're never billed extra for going over.</p>
-
-    <div class="lf-pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:72px;align-items:stretch;margin-top:6px;">
-
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Solo</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">For a solo practitioner or single-location studio</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Up to 20 calls / month</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Appointment booking &amp; rescheduling</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>1 calendar integration</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>After-hours coverage included</span></div>
-        </div>
-        <a href="#contact" class="btn btn-signal" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1.5px solid var(--signal);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;box-shadow:0 20px 40px -20px rgba(47,143,124,0.35);">
-        <span class="mono" style="position:absolute;top:-13px;left:28px;background:var(--signal);color:var(--bone);padding:5px 12px;border-radius:999px;font-size:11.5px;">Most booked</span>
-        <h4 style="font-size:20px;margin-top:8px;margin-bottom:6px;">Studio</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">For clinics, gyms and salons with a busy front desk</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Up to 40 calls / month</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Booking, reschedule &amp; cancellations</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>SMS / WhatsApp confirmations &amp; reminders</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Up to 2 locations</span></div>
-        </div>
-        <a href="#contact" class="btn btn-signal" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Multi-location</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">For chains and growing multi-location businesses</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Up to 80 calls / month</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Custom scripts &amp; tone of voice</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>CRM / calendar integrations</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--signal);flex-shrink:0;">–</span><span>Multi-language, priority support</span></div>
-        </div>
-        <a href="#contact" class="btn btn-signal" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
+    <div class="section-head">
+      <h2 id="pricing-title">Plans, quoted to fit your business.</h2>
+      <p>Every plan is priced after a free demo and consultation. No payment until we've agreed on scope in writing.</p>
     </div>
 
-    <!-- Website plans -->
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
-      <div style="width:8px;height:8px;border-radius:50%;background:var(--forge);"></div>
-      <h3 style="font-size:19px;">Website Design — one-time build</h3>
-    </div>
-    <div class="lf-pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;margin-top:6px;margin-bottom:72px;">
-
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Starter</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">A single, sharp page that gets you found and contacted</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>1-page site: home, services, contact</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Mobile-friendly design</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Live in 5-7 days</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Basic on-page SEO</span></div>
-        </div>
-        <a href="#contact" class="btn btn-forge" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1.5px solid var(--forge);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;box-shadow:0 20px 40px -20px rgba(242,107,58,0.35);">
-        <span class="mono" style="position:absolute;top:-13px;left:28px;background:var(--forge);color:var(--bone);padding:5px 12px;border-radius:999px;font-size:11.5px;">Most chosen</span>
-        <h4 style="font-size:20px;margin-top:8px;margin-bottom:6px;">Business</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">A full site built to turn visitors into enquiries</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Up to 6 pages</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Booking / enquiry form</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Google Business Profile setup</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>1 round of revisions included</span></div>
-        </div>
-        <a href="#contact" class="btn btn-forge" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;height:100%;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Custom</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">Fully custom design with booking or online ordering</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Fully custom design &amp; copy</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Booking / e-commerce integration</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Content management system</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--forge-dim);flex-shrink:0;">–</span><span>Maintenance plan available</span></div>
-        </div>
-        <a href="#contact" class="btn btn-forge" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
+    <div class="tabs" role="tablist" aria-label="Service plans">
+      <button class="tab" role="tab" id="tab-voice" aria-controls="panel-voice" aria-selected="true">Voice agent</button>
+      <button class="tab" role="tab" id="tab-web" aria-controls="panel-web" aria-selected="false" tabindex="-1">Website</button>
+      <button class="tab" role="tab" id="tab-chat" aria-controls="panel-chat" aria-selected="false" tabindex="-1">WhatsApp chatbot</button>
     </div>
 
-    <!-- WhatsApp chatbot plans -->
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
-      <div style="width:8px;height:8px;border-radius:50%;background:var(--sun);"></div>
-      <h3 style="font-size:19px;">WhatsApp Business Chatbot — monthly subscription</h3>
+    <div role="tabpanel" id="panel-voice" aria-labelledby="tab-voice">
+      <p class="panel-note">Monthly subscription. It covers the calling platform your agent runs on and is billed to you directly. Each plan includes a monthly call allowance sized to your real call volume during the free consultation. If you ever go over it, calls go to voicemail rather than being billed extra.</p>
+      <p class="panel-wa">Rather chat? <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20an%20AI%20voice%20agent%20for%20my%20business.%20%28from%3A%20Plans%29" class="link" target="_blank" rel="noopener">Ask about voice agent plans on WhatsApp</a></p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-top"><h3>Solo</h3></div>
+          <p>For a solo practitioner or single-location studio.</p>
+          <ul class="ticks"><li>Call allowance for one front desk</li><li>Appointment booking and rescheduling</li><li>1 calendar integration</li><li>After-hours coverage</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="AI voice agent">Get a quote</a>
+        </div>
+        <div class="plan">
+          <div class="plan-top"><h3>Studio</h3></div>
+          <p>For clinics, gyms and salons with a busy front desk.</p>
+          <ul class="ticks"><li>Higher call allowance for busy desks</li><li>Booking, rescheduling and cancellations</li><li>SMS and WhatsApp confirmations and reminders</li><li>Up to 2 locations</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="AI voice agent">Get a quote</a>
+        </div>
+        <div class="plan">
+          <div class="plan-top"><h3>Multi-location</h3></div>
+          <p>For chains and growing multi-location businesses.</p>
+          <ul class="ticks"><li>Call allowance pooled across locations</li><li>Custom scripts and tone of voice</li><li>CRM and calendar integrations</li><li>Multi-language, priority support</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="AI voice agent">Get a quote</a>
+        </div>
+      </div>
     </div>
-    <div class="lf-pricing-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;margin-top:6px;">
 
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Starter</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">Simple automated replies for a small business getting started on WhatsApp.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Auto-replies to hours, pricing &amp; location</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>One language</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Handoff to you for anything else</span></div>
+    <div role="tabpanel" id="panel-web" aria-labelledby="tab-web" hidden>
+      <p class="panel-note">One-time build. Hosting and domain are billed separately unless your proposal includes them.</p>
+      <p class="panel-wa">Rather chat? <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20booking%20website%20for%20my%20business.%20%28from%3A%20Plans%29" class="link" target="_blank" rel="noopener">Ask about website plans on WhatsApp</a></p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-top"><h3>Starter</h3></div>
+          <p>A single, sharp page that gets you found and contacted.</p>
+          <ul class="ticks"><li>One page: home, services, contact</li><li>Mobile-friendly design</li><li>Live in 5 to 7 days</li><li>On-page SEO basics</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="Website design">Get a quote</a>
         </div>
-        <a href="#contact" class="btn btn-sun" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1.5px solid var(--sun);border-radius:18px;padding:32px;display:flex;flex-direction:column;box-shadow:0 20px 40px -20px rgba(201,154,62,0.35);">
-        <span class="mono" style="position:absolute;top:-13px;left:28px;background:var(--sun);color:var(--bone);padding:5px 12px;border-radius:999px;font-size:11.5px;">Most chosen</span>
-        <h4 style="font-size:20px;margin-top:8px;margin-bottom:6px;">Business</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">For a business that wants bookings and orders taken care of in-chat.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Everything in Starter</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Catalog browsing &amp; booking inside chat</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Order &amp; appointment confirmations</span></div>
+        <div class="plan">
+          <div class="plan-top"><h3>Business</h3></div>
+          <p>A full site built to turn visitors into enquiries.</p>
+          <ul class="ticks"><li>Up to 6 pages</li><li>Booking or enquiry form</li><li>Google Business Profile setup</li><li>1 round of revisions</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="Website design">Get a quote</a>
         </div>
-        <a href="#contact" class="btn btn-sun" style="width:100%;margin-top:auto;">Get a custom quote</a>
-      </div>
-
-      <div style="position:relative;background:var(--card);border:1px solid var(--line-light);border-radius:18px;padding:32px;display:flex;flex-direction:column;">
-        <h4 style="font-size:20px;margin-bottom:6px;">Advanced</h4>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:1.5;min-height:42px;">For a business running multiple locations or teams on WhatsApp.</p>
-        <div style="display:flex;flex-direction:column;gap:10px;margin:20px 0 26px;flex-grow:1;">
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Everything in Business</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>CRM &amp; calendar integrations</span></div>
-          <div style="display:flex;gap:9px;font-size:14px;line-height:1.4;"><span style="color:var(--sun-dim);flex-shrink:0;">–</span><span>Multi-language, multi-agent handoff</span></div>
+        <div class="plan">
+          <div class="plan-top"><h3>Custom</h3></div>
+          <p>Fully custom design with booking or online ordering.</p>
+          <ul class="ticks"><li>Custom design and copy</li><li>Booking or e-commerce integration</li><li>Content management system</li><li>Maintenance plan available</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="Website design">Get a quote</a>
         </div>
-        <a href="#contact" class="btn btn-sun" style="width:100%;margin-top:auto;">Get a custom quote</a>
       </div>
-
     </div>
+
+    <div role="tabpanel" id="panel-chat" aria-labelledby="tab-chat" hidden>
+      <p class="panel-note">Monthly subscription, running on the WhatsApp Business Platform.</p>
+      <p class="panel-wa">Rather chat? <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20WhatsApp%20chatbot%20for%20my%20business.%20%28from%3A%20Plans%29" class="link" target="_blank" rel="noopener">Ask about WhatsApp chatbot plans on WhatsApp</a></p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-top"><h3>Starter</h3></div>
+          <p>Automated replies for a business getting started on WhatsApp.</p>
+          <ul class="ticks"><li>Replies about hours, pricing and location</li><li>One language</li><li>Handover to you for anything else</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="WhatsApp chatbot">Get a quote</a>
+        </div>
+        <div class="plan">
+          <div class="plan-top"><h3>Business</h3></div>
+          <p>Bookings and orders handled inside the chat.</p>
+          <ul class="ticks"><li>Everything in Starter</li><li>Catalog browsing and booking in chat</li><li>Order and appointment confirmations</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="WhatsApp chatbot">Get a quote</a>
+        </div>
+        <div class="plan">
+          <div class="plan-top"><h3>Advanced</h3></div>
+          <p>For businesses running several locations or teams on WhatsApp.</p>
+          <ul class="ticks"><li>Everything in Business</li><li>CRM and calendar integrations</li><li>Multi-language, multi-agent handover</li></ul>
+          <a href="#contact" class="btn btn-block" data-need="WhatsApp chatbot">Get a quote</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-foot">Indian clients are quoted in rupees, with GST where applicable. International clients are quoted in US dollars. Full details in our <a href="terms.html" class="link">terms</a>.</p>
   </div>
 </section>
 
-<!-- WORK -->
-<section id="work" style="background:var(--ember);padding:96px 0;">
-  <div class="wrap">
-    <p class="eyebrow" style="margin-bottom:14px;">Work</p>
-    <h2 style="color:var(--bone);font-size:clamp(1.7rem,2.2vw + 1rem,2.4rem);max-width:640px;margin-bottom:18px;">Live in the field, not just on paper.</h2>
-    <p style="color:var(--bone-soft);font-size:15.5px;max-width:600px;line-height:1.6;margin-bottom:52px;">Two projects shipped and running right now for real clients.</p>
-
-    <div class="lf-work-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:20px;">
-
-      <div class="lf-work-card" style="background:var(--ember-2);border:1px solid var(--line-dark);border-radius:20px;overflow:hidden;">
-        <div style="background:var(--ember-3);padding:36px 32px 30px;display:flex;justify-content:center;">
-          <div style="width:100%;max-width:260px;background:#141110;border-radius:18px;padding:24px 20px;display:flex;flex-direction:column;align-items:center;gap:16px;border:1px solid rgba(247,244,236,0.08);">
-            <div style="position:relative;width:56px;height:56px;display:flex;align-items:center;justify-content:center;">
-              <div class="lf-ring"></div>
-              <div class="lf-ring lf-ring-2"></div>
-              <div style="width:44px;height:44px;border-radius:50%;background:var(--signal);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;">
-                <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="#F7F4EC"/></svg>
-              </div>
-            </div>
-            <div style="text-align:center;">
-              <p style="color:var(--bone);font-size:14.5px;font-weight:600;margin-bottom:3px;">Falcon Gym</p>
-              <p class="mono" style="color:var(--bone-soft);font-size:11px;">Incoming call · answered by agent</p>
-            </div>
-          </div>
-        </div>
-        <div style="padding:32px 36px 36px;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-            <span class="lf-live-dot"></span>
-            <span class="mono" style="font-size:11.5px;font-weight:600;letter-spacing:0.05em;color:var(--signal-bright);">LIVE · AI VOICE AGENT</span>
-          </div>
-          <h3 style="color:var(--bone);font-size:28px;margin-bottom:14px;">Falcon Gym</h3>
-          <p style="color:var(--bone-soft);font-size:15px;line-height:1.65;">Front-desk calls used to go unanswered during class hours. Now their agent picks up every time — booking classes and trials into the gym's calendar, answering membership and pricing questions, and confirming by text before the caller hangs up.</p>
-        </div>
-      </div>
-
-      <div class="lf-work-card" style="background:var(--ember-2);border:1px solid var(--line-dark);border-radius:20px;overflow:hidden;">
-        <div style="background:var(--ember-3);padding:36px 32px 30px;display:flex;justify-content:center;">
-          <div style="width:100%;max-width:260px;background:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 20px 40px -18px rgba(0,0,0,0.5);">
-            <div style="display:flex;align-items:center;gap:6px;padding:10px 12px;background:#F1EDE4;border-bottom:1px solid rgba(0,0,0,0.06);">
-              <span style="width:8px;height:8px;border-radius:50%;background:#D9D2C4;display:inline-block;"></span>
-              <span style="width:8px;height:8px;border-radius:50%;background:#D9D2C4;display:inline-block;"></span>
-              <span style="width:8px;height:8px;border-radius:50%;background:#D9D2C4;display:inline-block;"></span>
-              <span class="mono" style="margin-left:6px;font-size:9.5px;color:#8A8074;">redesigned · live</span>
-            </div>
-            <div style="padding:16px;">
-              <div style="height:7px;width:38%;background:#EAE3D3;border-radius:4px;margin-bottom:14px;"></div>
-              <div style="height:52px;border-radius:8px;background:linear-gradient(135deg,rgba(242,107,58,0.18),rgba(242,107,58,0.05));margin-bottom:12px;"></div>
-              <div style="height:5px;width:82%;background:#EFE9DC;border-radius:4px;margin-bottom:7px;"></div>
-              <div style="height:5px;width:58%;background:#EFE9DC;border-radius:4px;margin-bottom:14px;"></div>
-              <div style="height:18px;width:64px;background:var(--forge);border-radius:999px;"></div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:32px 36px 36px;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-            <span class="lf-live-dot"></span>
-            <span class="mono" style="font-size:11.5px;font-weight:600;letter-spacing:0.05em;color:var(--forge);">LIVE · WEBSITE REDESIGN</span>
-          </div>
-          <h3 style="color:var(--bone);font-size:28px;margin-bottom:14px;">Beauty Salon, Kuwait</h3>
-          <p style="color:var(--bone-soft);font-size:15px;line-height:1.65;">Their old site didn't reflect the salon or convert visitors. We rebuilt it end to end — new structure, new design, new copy — and it's been live for their Kuwait clientele since launch.</p>
-        </div>
-      </div>
-
+<!-- FAQ (mirrors the FAQPage schema in <head>; keep them in sync) -->
+<section id="faq" class="section section-alt" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <h2 id="faq-title">Questions owners ask us first.</h2>
+    <div class="faq">
+      <details open>
+        <summary>What is an AI voice agent?</summary>
+        <p>An AI voice agent is software that answers your business phone in a natural voice. A Loopforge agent picks up every call, day or night, answers common questions about hours, services and pricing, books, reschedules or cancels appointments directly in your calendar, and sends the caller an SMS or WhatsApp confirmation.</p>
+      </details>
+      <details>
+        <summary>How much does an AI voice agent cost?</summary>
+        <p>Every plan is quoted individually after a free consultation. Voice agents run on a monthly subscription that covers the calling platform the agent runs on, billed to you directly. Each plan includes a monthly call allowance sized to your call volume. If you go over it, calls go to voicemail instead of being billed extra.</p>
+      </details>
+      <details>
+        <summary>How long does it take to go live?</summary>
+        <p>Most projects go live in about two weeks. A starter website usually takes 5 to 7 days, and a voice agent or WhatsApp chatbot takes 1 to 3 weeks, depending on how quickly content and feedback come back.</p>
+      </details>
+      <details>
+        <summary>Which businesses is Loopforge built for?</summary>
+        <p>Appointment-driven small businesses: clinics, dentists, gyms, salons, spas, studios and local service businesses. Recent projects include three dental clinics in Mumbai and Navi Mumbai, a dessert café with online ordering, a bagel chain and a Mexican restaurant in the US, and a Houston realtor.</p>
+      </details>
+      <details>
+        <summary>Do you work with businesses outside India?</summary>
+        <p>Yes. Loopforge is based in India and works with clients worldwide, including live websites for businesses in Texas, Alabama and Louisiana. Indian clients are quoted in rupees with GST where applicable; international clients are quoted in US dollars.</p>
+      </details>
+      <details>
+        <summary>Can the voice agent speak more than one language?</summary>
+        <p>Yes. Multi-language calling is included in the Multi-location voice agent plan, and the Advanced WhatsApp chatbot plan supports multiple languages too.</p>
+      </details>
+      <details>
+        <summary>Who owns the website or agent once it is built?</summary>
+        <p>You do. Once a project is paid in full, ownership of the website files, voice agent configuration or chatbot flow transfers to you.</p>
+      </details>
+      <details>
+        <summary>How do I contact Loopforge?</summary>
+        <p>Email <a href="mailto:work23aryan@gmail.com" class="link">work23aryan@gmail.com</a>, call <a href="tel:+919619344081" class="link">+91 96193 44081</a>, or message us on <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%3A%20" class="link" target="_blank" rel="noopener">WhatsApp at +91 91371 61472</a>. You can also use the form on this page to request a free 20-minute consultation. We reply within a day.</p>
+      </details>
     </div>
-
-    <a href="#contact" style="display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px dashed var(--line-dark);border-radius:16px;padding:22px 28px;flex-wrap:wrap;">
-      <span style="color:var(--bone-soft);font-size:14.5px;">One slot open for a new voice agent or website build.</span>
-      <span class="mono" style="color:var(--forge);font-size:13.5px;font-weight:600;">Claim it →</span>
-    </a>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" style="background:var(--paper-2);padding:96px 0;">
-  <div class="wrap lf-contact-grid" style="display:grid;grid-template-columns:1fr 1.05fr;gap:56px;">
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
     <div>
-      <p class="eyebrow" style="margin-bottom:14px;">Contact</p>
-      <h2 style="font-size:clamp(1.7rem,2.2vw + 1rem,2.4rem);margin-bottom:20px;">Tell us about your business. We'll reply within a day.</h2>
-      <p style="font-size:15.5px;color:var(--ink-soft);line-height:1.6;max-width:480px;">Free 20-minute consultation, no obligation. We'll tell you honestly whether a voice agent, a new site, or both, is the right place to start.</p>
-      <div style="margin-top:36px;display:flex;flex-direction:column;gap:14px;">
-        <div style="display:flex;gap:12px;font-size:15px;"><span class="mono" style="color:var(--ink-soft);width:80px;flex-shrink:0;">Email</span><a href="mailto:work23aryan@gmail.com" style="text-decoration:underline;text-underline-offset:3px;">work23aryan@gmail.com</a></div>
-        <div style="display:flex;gap:12px;font-size:15px;"><span class="mono" style="color:var(--ink-soft);width:80px;flex-shrink:0;">Phone</span><a href="tel:+919619344081" style="text-decoration:underline;text-underline-offset:3px;">+91 96193 44081</a></div>
-        <div style="display:flex;gap:12px;font-size:15px;"><span class="mono" style="color:var(--ink-soft);width:80px;flex-shrink:0;">Based</span><span>India · working with clients worldwide</span></div>
+      <h2 id="contact-title">Tell us about your business.</h2>
+      <p class="contact-intro">A free 20-minute call, no obligation. We'll tell you honestly whether a voice agent, a new site, or both is the right place to start. We reply within a day.</p>
+      <div class="wa-choose">
+        <p id="wa-choose-label">Message us on WhatsApp about:</p>
+        <ul aria-labelledby="wa-choose-label">
+          <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20booking%20website%20for%20my%20business.%20%28from%3A%20Contact%29" class="wa-chip" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>Booking website</a></li>
+          <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20an%20AI%20voice%20agent%20for%20my%20business.%20%28from%3A%20Contact%29" class="wa-chip" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>AI voice agent</a></li>
+          <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20WhatsApp%20chatbot%20for%20my%20business.%20%28from%3A%20Contact%29" class="wa-chip" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>WhatsApp chatbot</a></li>
+          <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20not%20sure%20which%20service%20I%20need%20yet.%20Can%20you%20help%3F%20%28from%3A%20Contact%29" class="wa-chip" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg>Not sure yet</a></li>
+        </ul>
+        <p class="wa-hint">Your message opens with the service already filled in, so we know what you need before we reply.</p>
       </div>
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:work23aryan@gmail.com" class="link">work23aryan@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+919619344081" class="link">+91 96193 44081</a></li>
+        <li><span>WhatsApp</span><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%3A%20" class="link" target="_blank" rel="noopener">+91 91371 61472</a></li>
+        <li><span>Based in</span>India, working with clients worldwide</li>
+      </ul>
     </div>
 
-    <div id="lf-card-container" style="background:var(--card);border-radius:28px;border:1px solid var(--line-light);box-shadow:0 30px 60px -30px rgba(31,27,24,0.25);min-height:510px;display:flex;flex-direction:column;justify-content:center;">
-      <div style="padding:36px;">
-        <!-- Form View -->
-        <div id="lf-form-view">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:26px;">
-            <img src="images/logo.png" alt="" loading="lazy" width="34" height="34" style="border-radius:9px;">
-            <div>
-              <p style="font-size:15px;font-weight:600;">Start your project</p>
-              <p class="mono" style="font-size:11.5px;color:var(--ink-soft);">Takes about 60 seconds</p>
-            </div>
-          </div>
-
-          <div style="display:flex;gap:6px;margin-bottom:30px;">
-            <div class="lf-seg"><div class="lf-seg-fill" id="lf-seg-1"></div></div>
-            <div class="lf-seg"><div class="lf-seg-fill" id="lf-seg-2"></div></div>
-            <div class="lf-seg"><div class="lf-seg-fill" id="lf-seg-3"></div></div>
-            <div class="lf-seg"><div class="lf-seg-fill" id="lf-seg-4"></div></div>
-          </div>
-
-          <!-- Formspree Error Banner (only shown if submission fails) -->
-          <div data-fs-error class="lf-fs-message lf-fs-error">
-            <p style="font-weight:600;font-size:15px;color:var(--forge);margin-bottom:4px;">⚠️ Submission issue</p>
-            <p style="font-size:13px;color:var(--ink);line-height:1.5;">There was a problem submitting your form. Please try again or email us directly at <a href="mailto:work23aryan@gmail.com" style="text-decoration:underline;">work23aryan@gmail.com</a>.</p>
-          </div>
-
-          <form id="lf-contact-form" action="https://formspree.io/f/mqpaezzr" method="POST" style="display:flex;flex-direction:column;gap:18px;">
-            <div style="display:flex;flex-direction:column;gap:7px;">
-              <label for="lf-name" class="mono" style="font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--ink-soft);text-transform:uppercase;">Your name</label>
-              <input id="lf-name" name="name" class="lf-input" type="text" placeholder="e.g. Aditi Rao" required data-fs-field>
-              <span data-fs-error="name" class="mono lf-field-error"></span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:7px;">
-              <label for="lf-email" class="mono" style="font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--ink-soft);text-transform:uppercase;">Email address</label>
-              <input id="lf-email" name="email" class="lf-input" type="email" placeholder="e.g. aditi@sunrisedental.com" required data-fs-field>
-              <span data-fs-error="email" class="mono lf-field-error"></span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:7px;">
-              <label for="lf-biz" class="mono" style="font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--ink-soft);text-transform:uppercase;">Business &amp; city</label>
-              <input id="lf-biz" name="business" class="lf-input" type="text" placeholder="e.g. Sunrise Dental, Pune" required data-fs-field>
-              <span data-fs-error="business" class="mono lf-field-error"></span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:7px;">
-              <label for="lf-need" class="mono" style="font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--ink-soft);text-transform:uppercase;">What do you need?</label>
-              <select id="lf-need" name="service" class="lf-input" required data-fs-field>
-                <option value="">Select one</option>
-                <option value="AI voice agent">AI voice agent</option>
-                <option value="Website design">Website design</option>
-                <option value="WhatsApp chatbot">WhatsApp chatbot</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-              <span data-fs-error="service" class="mono lf-field-error"></span>
-            </div>
-
-            <div class="lf-preview-strip" id="lf-preview-strip">
-              <div class="lf-preview-badge" id="lf-preview-badge">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <span class="mono" id="lf-preview-text" style="font-size:12px;color:var(--ink-soft);">Fill in the details to see your project preview.</span>
-            </div>
-
-            <button type="submit" data-fs-submit-btn class="btn btn-forge" style="margin-top:4px;width:100%;transition:transform .18s cubic-bezier(0.34,1.56,0.64,1);cursor:pointer;">Request a free call</button>
-          </form>
+    <div class="form-card">
+      <div id="form-view">
+        <div class="form-head">
+          <p>Start your project</p>
+          <p>About a minute</p>
+        </div>
+        <div class="progress" aria-hidden="true">
+          <div class="seg"><div class="seg-fill" id="seg-1"></div></div>
+          <div class="seg"><div class="seg-fill" id="seg-2"></div></div>
+          <div class="seg"><div class="seg-fill" id="seg-3"></div></div>
+          <div class="seg"><div class="seg-fill" id="seg-4"></div></div>
         </div>
 
-        <!-- Success Screen View (Replaces form view upon submission) -->
-        <div data-fs-success id="lf-success-view" class="lf-success-screen">
-          <div class="lf-success-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </div>
-          <h3 class="lf-success-title">✓ Request received!</h3>
-          <p class="lf-success-desc">Thanks for reaching out. We will review your project details and get back to you within 24 hours.</p>
-          <button type="button" id="lf-reset-form-btn" class="lf-success-reset mono">Send another request</button>
+        <div data-fs-error class="fs-error" role="alert">
+          <strong>Your request didn't send.</strong> Check your connection and try again, or email <a href="mailto:work23aryan@gmail.com" class="link">work23aryan@gmail.com</a>.
         </div>
+
+        <form id="contact-form" class="form" action="https://formspree.io/f/mqpaezzr" method="POST">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" class="input" type="text" autocomplete="name" placeholder="Aditi Rao" aria-describedby="err-name" required data-fs-field>
+            <span data-fs-error="name" id="err-name" class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" class="input" type="email" autocomplete="email" placeholder="aditi@sunrisedental.com" aria-describedby="err-email" required data-fs-field>
+            <span data-fs-error="email" id="err-email" class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="f-biz">Business and city</label>
+            <input id="f-biz" name="business" class="input" type="text" autocomplete="organization" placeholder="Sunrise Dental, Pune" aria-describedby="err-business" required data-fs-field>
+            <span data-fs-error="business" id="err-business" class="field-error"></span>
+          </div>
+          <div class="field">
+            <label for="f-need">What do you need?</label>
+            <select id="f-need" name="service" class="input" aria-describedby="err-service" required data-fs-field>
+              <option value="">Choose one</option>
+              <option value="AI voice agent">AI voice agent</option>
+              <option value="Website design">Website design</option>
+              <option value="WhatsApp chatbot">WhatsApp chatbot</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+            <span data-fs-error="service" id="err-service" class="field-error"></span>
+          </div>
+
+          <div class="summary-strip" id="summary-strip" aria-live="polite">
+            <span class="summary-badge" id="summary-badge" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+            </span>
+            <span id="summary-text">Your request summary appears here.</span>
+          </div>
+
+          <button type="submit" data-fs-submit-btn class="btn btn-block">Request a free call</button>
+        </form>
+      </div>
+
+      <div data-fs-success id="success-view" class="success" role="status">
+        <div class="success-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></svg>
+        </div>
+        <h3>Call requested.</h3>
+        <p>We'll read your details and reply within 24 hours to set up a time.</p>
+        <button type="button" id="reset-form">Send another request</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background:var(--ember);padding-top:72px;">
+</main>
+
+<footer class="footer">
   <div class="wrap">
-    <div class="lf-footer-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:56px;border-bottom:1px solid var(--line-dark);">
+    <div class="footer-top">
       <div>
-        <a href="#top" style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-          <img src="images/logo.png" alt="Loopforge logo" loading="lazy" width="32" height="32" style="border-radius:9px;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;color:var(--bone);">loopforge</span>
-        </a>
-        <p style="color:var(--bone-soft);font-size:14px;line-height:1.6;max-width:280px;">AI voice agents for appointment booking, and websites for small business — built for clients in India and worldwide.</p>
+        <a href="#top" class="brand"><img src="images/logo.png" alt="" width="30" height="30" loading="lazy">loopforge</a>
+        <p>Booking websites, WhatsApp chatbots and AI voice agents for small businesses in India and worldwide.</p>
       </div>
       <div>
-        <p class="mono" style="font-size:12.5px;color:var(--bone-soft);margin-bottom:16px;">Services</p>
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <a href="#services" style="color:var(--bone);font-size:14.5px;opacity:0.85;">AI Voice Agent</a>
-          <a href="#services" style="color:var(--bone);font-size:14.5px;opacity:0.85;">Website Design</a>
-          <a href="#services" style="color:var(--bone);font-size:14.5px;opacity:0.85;">WhatsApp Chatbot</a>
-          <a href="#pricing" style="color:var(--bone);font-size:14.5px;opacity:0.85;">Pricing</a>
-        </div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="#services">AI voice agent</a></li>
+          <li><a href="#services">Website design</a></li>
+          <li><a href="#services">WhatsApp chatbot</a></li>
+          <li><a href="#pricing">Plans</a></li>
+        </ul>
       </div>
       <div>
-        <p class="mono" style="font-size:12.5px;color:var(--bone-soft);margin-bottom:16px;">Company</p>
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <a href="#work" style="color:var(--bone);font-size:14.5px;opacity:0.85;">Work</a>
-          <a href="#contact" style="color:var(--bone);font-size:14.5px;opacity:0.85;">Contact</a>
-          <a href="terms.html" style="color:var(--bone);font-size:14.5px;opacity:0.85;">Terms &amp; Conditions</a>
-        </div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="terms.html">Terms and conditions</a></li>
+        </ul>
       </div>
       <div>
-        <p class="mono" style="font-size:12.5px;color:var(--bone-soft);margin-bottom:16px;">Get in touch</p>
-        <div style="display:flex;flex-direction:column;gap:11px;">
-          <a href="mailto:work23aryan@gmail.com" style="color:var(--bone);font-size:14.5px;opacity:0.85;">work23aryan@gmail.com</a>
-          <a href="tel:+919619344081" style="color:var(--bone);font-size:14.5px;opacity:0.85;">+91 96193 44081</a>
-          <span style="color:var(--bone-soft);font-size:14px;">India · working worldwide</span>
-        </div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:work23aryan@gmail.com">work23aryan@gmail.com</a></li>
+          <li><a href="tel:+919619344081">+91 96193 44081</a></li>
+          <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%3A%20" target="_blank" rel="noopener">WhatsApp +91 91371 61472</a></li>
+          <li>India, working worldwide</li>
+        </ul>
       </div>
     </div>
-    <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;padding:24px 0;">
-      <span class="mono" style="font-size:12px;color:var(--bone-soft);">© 2026 Loopforge. AI voice agents &amp; websites for small business.</span>
+    <div class="footer-bottom">
+      <span>© 2026 Loopforge</span>
+      <span>AI voice agents for small business</span>
     </div>
   </div>
 </footer>
 
+<div class="wa-widget">
+  <div class="wa-sheet" id="wa-sheet" role="dialog" aria-modal="false" aria-labelledby="wa-sheet-title" hidden>
+    <div class="wa-sheet-head">
+      <p id="wa-sheet-title">What do you need?</p>
+      <button type="button" class="wa-close" id="wa-close" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    </div>
+    <p class="wa-sheet-sub">Tap one. WhatsApp opens with your message ready.</p>
+    <ul class="wa-options">
+      <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20booking%20website%20for%20my%20business.%20%28from%3A%20WhatsApp%20button%29" target="_blank" rel="noopener"><strong>Booking website</strong><span>Customers book you online, any time</span></a></li>
+      <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20an%20AI%20voice%20agent%20for%20my%20business.%20%28from%3A%20WhatsApp%20button%29" target="_blank" rel="noopener"><strong>AI voice agent</strong><span>Answers your calls and books 24/7</span></a></li>
+      <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%20a%20WhatsApp%20chatbot%20for%20my%20business.%20%28from%3A%20WhatsApp%20button%29" target="_blank" rel="noopener"><strong>WhatsApp chatbot</strong><span>Auto-replies and takes bookings in chat</span></a></li>
+      <li><a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20not%20sure%20which%20service%20I%20need%20yet.%20Can%20you%20help%3F%20%28from%3A%20WhatsApp%20button%29" target="_blank" rel="noopener"><strong>Not sure yet</strong><span>Tell us about your business</span></a></li>
+    </ul>
+  </div>
+  <a href="https://wa.me/919137161472?text=Hi%20Loopforge%2C%20I%27m%20interested%20in%3A%20" class="wa-float" id="wa-float" target="_blank" rel="noopener" aria-controls="wa-sheet" aria-haspopup="dialog" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></svg><span>Chat on WhatsApp</span></a>
+</div>
+
 <script src="script.js"></script>
-<!-- Formspree AJAX SDK -->
 <script>
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#lf-contact-form', formId: 'mqpaezzr' });
+  formspree('initForm', { formElement: '#contact-form', formId: 'mqpaezzr' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>

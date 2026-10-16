@@ -1,0 +1,29 @@
+# Loopforge
+
+> Loopforge is an India-based studio that builds booking systems for clinics, restaurants and local businesses: websites with slot booking, WhatsApp Business chatbots, and AI voice agents that answer calls and book into the same calendar. Clients are in India and worldwide.
+
+Loopforge works with appointment-driven businesses: clinics, dentists, gyms, salons, spas, studios and local services. There is no fixed price list: every project is quoted individually after a free consultation, based on the business's needs. Most projects go live in about two weeks. Live projects include websites for three dental clinics in Mumbai and Navi Mumbai, a dessert café with online ordering, a US bagel chain, a Mexican restaurant in Alabama and a Houston realtor.
+
+Contact: work23aryan@gmail.com, phone +91 96193 44081, WhatsApp enquiries +91 91371 61472 (https://wa.me/919137161472).
+
+## Services
+
+- [AI voice agent](https://loopforge.ai/#services): answers calls 24/7, books, reschedules and cancels appointments in your calendar, sends SMS and WhatsApp reminders.
+- [Website design](https://loopforge.ai/#services): custom, mobile-first websites with booking or enquiry forms, on-page SEO and Google Business Profile setup.
+- [WhatsApp Business chatbot](https://loopforge.ai/#services): instant replies, catalog browsing and in-chat booking, with handover to a person.
+
+## Key pages
+
+- [Projects](https://loopforge.ai/#projects): live client websites with screenshots and links.
+- [FAQ](https://loopforge.ai/#faq): cost, timelines, languages, ownership and who Loopforge is for.
+- [Terms and conditions](https://loopforge.ai/terms.html): payment, timelines, ownership and refund terms.
+
+## Live projects
+
+- [DE.25 by Harshali](https://online-cake-deliver.vercel.app/): Online ordering website for a dessert café in Ghansoli, Navi Mumbai.
+- [Shug's Bagels](https://shugs-bagels-psi.vercel.app/): Multi-location ordering website for a bagel chain in Dallas, Austin and New Orleans.
+- [Smile Arc Dental Care](https://smile-arc-dental-care.vercel.app/): Dental clinic website with slot booking in Kalachowki, Mumbai.
+- [Nova Dental Care & Implant Centre](https://nova-dental-care-implant-centre-three.vercel.app/): Dental and implant clinic website with slot booking in Kandivali East, Mumbai.
+- [Dr. Neil's Dental Studio](https://dr-neil-five.vercel.app/): Dental studio website with slot booking in Ghansoli, Navi Mumbai.
+- [Mexico Típico](https://mexico-tipico.vercel.app/): Restaurant website with reservations for a Mexican restaurant in Prattville, Alabama.
+- [Don Ngo, Realtor](https://don-ngo.vercel.app/): Personal website for a Houston real estate agent.

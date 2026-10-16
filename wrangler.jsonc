@@ -1,0 +1,10 @@
+{
+  // Static site served by Cloudflare Workers (no build step).
+  // "name" must match the Worker's name in the Cloudflare dashboard.
+  "name": "loop-forge-ai",
+  "compatibility_date": "2026-10-12",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  }
+}

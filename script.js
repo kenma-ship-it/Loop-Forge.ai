@@ -1,130 +1,178 @@
 // ==========================================================================
-// Loopforge — site behavior (theme toggle + contact form)
+// Loopforge — site behavior: theme toggle, hero call, plan tabs, contact form
+// (Initial theme is set inline in <head> to avoid a flash.)
 // ==========================================================================
 
 (function () {
   "use strict";
 
   var STORAGE_KEY = "loopforge-theme";
-
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-
-  function initTheme() {
-    var saved = null;
-    try {
-      saved = localStorage.getItem(STORAGE_KEY);
-    } catch (e) {
-      // localStorage unavailable (privacy mode, etc.) — fall back silently
-    }
-    if (saved === "dark" || saved === "light") {
-      applyTheme(saved);
-      return;
-    }
-    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    applyTheme(prefersDark ? "dark" : "light");
-  }
-
-  function toggleTheme() {
-    var current = document.documentElement.getAttribute("data-theme") || "light";
-    var next = current === "dark" ? "light" : "dark";
-    applyTheme(next);
-    try {
-      localStorage.setItem(STORAGE_KEY, next);
-    } catch (e) {
-      // ignore if storage isn't available
-    }
-  }
+  var $ = function (id) { return document.getElementById(id); };
 
   function initThemeToggle() {
-    var btn = document.getElementById("lf-theme-toggle");
-    if (btn) {
-      btn.addEventListener("click", toggleTheme);
-    }
+    var btn = $("theme-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
+    });
   }
 
-  // --- contact form: live progress bar + reactive preview strip ---
-  function initContactForm() {
-    var nameInput = document.getElementById("lf-name");
-    var emailInput = document.getElementById("lf-email");
-    var bizInput = document.getElementById("lf-biz");
-    var needSelect = document.getElementById("lf-need");
-    if (!nameInput || !bizInput || !needSelect) return;
+  // --- hero: play the call transcript once, line by line ---
+  function initCall() {
+    var log = $("call-log");
+    var timer = $("call-timer");
+    if (!log || !document.documentElement.classList.contains("js-anim")) return;
 
-    var seg1 = document.getElementById("lf-seg-1");
-    var seg2 = document.getElementById("lf-seg-2");
-    var seg3 = document.getElementById("lf-seg-3");
-    var seg4 = document.getElementById("lf-seg-4");
-    var strip = document.getElementById("lf-preview-strip");
-    var badge = document.getElementById("lf-preview-badge");
-    var previewText = document.getElementById("lf-preview-text");
+    var lines = Array.prototype.slice.call(log.children);
+    var typing = document.createElement("li");
+    typing.className = "typing is-in";
+    typing.setAttribute("aria-hidden", "true");
+    typing.innerHTML = "<i></i><i></i><i></i>";
+
+    var secs = 0;
+    var tick;
+    var i = 0;
+    function next() {
+      if (i >= lines.length) { clearInterval(tick); return; }
+      var line = lines[i++];
+      // a beat of "typing" before agent lines, so it reads like a live call
+      var pause = line.classList.contains("agent") ? 900 : 500;
+      if (line.classList.contains("agent")) log.insertBefore(typing, line);
+      setTimeout(function () {
+        if (typing.parentNode) typing.parentNode.removeChild(typing);
+        line.classList.add("is-in");
+        setTimeout(next, 500 + line.textContent.length * 12);
+      }, pause);
+    }
+    function start() {
+      tick = setInterval(function () {
+        secs++;
+        timer.textContent = "00:" + (secs < 10 ? "0" : "") + secs;
+      }, 1000);
+      setTimeout(next, 600);
+    }
+
+    // start when the call scrolls into view (below the fold on phones)
+    if (!("IntersectionObserver" in window)) return start();
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { io.disconnect(); start(); }
+    }, { threshold: 0.3 });
+    io.observe(log);
+  }
+
+  // --- pricing tabs (ARIA tabs pattern) ---
+  function initTabs() {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+    if (!tabs.length) return;
+
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute("aria-selected", on);
+        t.tabIndex = on ? 0 : -1;
+        $(t.getAttribute("aria-controls")).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener("click", function () { select(tab); });
+      tab.addEventListener("keydown", function (e) {
+        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (d) { e.preventDefault(); select(tabs[(idx + d + tabs.length) % tabs.length], true); }
+      });
+    });
+
+    // service "plans" links open the matching tab
+    document.querySelectorAll("[data-plan]").forEach(function (a) {
+      a.addEventListener("click", function () { select($("tab-" + a.getAttribute("data-plan"))); });
+    });
+  }
+
+  // --- contact form: progress bar, summary strip, Formspree success view ---
+  function initContactForm() {
+    var form = $("contact-form");
+    if (!form) return;
+    var fields = [$("f-name"), $("f-email"), $("f-biz"), $("f-need")];
+    var strip = $("summary-strip");
+    var badge = $("summary-badge");
+    var text = $("summary-text");
 
     function update() {
-      var nameFilled = nameInput.value.trim().length > 0;
-      var emailFilled = emailInput ? emailInput.value.trim().length > 0 : true;
-      var bizFilled = bizInput.value.trim().length > 0;
-      var needFilled = needSelect.value !== "";
-      var allFilled = nameFilled && emailFilled && bizFilled && needFilled;
-
-      if (seg1) seg1.classList.toggle("filled", nameFilled);
-      if (seg2) seg2.classList.toggle("filled", emailFilled);
-      if (seg3) seg3.classList.toggle("filled", bizFilled);
-      if (seg4) seg4.classList.toggle("filled", needFilled);
-      if (strip) strip.classList.toggle("filled", allFilled);
-      if (badge) badge.classList.toggle("filled", allFilled);
-
-      var text = "Fill in the details to see your project preview.";
-      if (allFilled) {
-        text = nameInput.value.trim() + " · " + bizInput.value.trim() + " · " + needSelect.value;
-      } else if (nameFilled || bizFilled) {
-        text = "Building a preview for " + (nameInput.value.trim() || bizInput.value.trim()) + "...";
-      }
-      if (previewText) previewText.textContent = text;
+      var vals = fields.map(function (f) { return f.value.trim(); });
+      vals.forEach(function (v, i) { $("seg-" + (i + 1)).classList.toggle("filled", !!v); });
+      var all = vals.every(Boolean);
+      strip.classList.toggle("filled", all);
+      badge.classList.toggle("filled", all);
+      text.textContent = all
+        ? vals[3] + " for " + vals[2] + ", reply to " + vals[1]
+        : "Your request summary appears here.";
     }
-
-    nameInput.addEventListener("input", update);
-    if (emailInput) emailInput.addEventListener("input", update);
-    bizInput.addEventListener("input", update);
-    needSelect.addEventListener("change", update);
+    fields.forEach(function (f) { f.addEventListener("input", update); f.addEventListener("change", update); });
     update();
 
-    // --- Formspree success screen transition & reset ---
-    var formView = document.getElementById("lf-form-view");
-    var successView = document.getElementById("lf-success-view");
-    var resetBtn = document.getElementById("lf-reset-form-btn");
-    var form = document.getElementById("lf-contact-form");
+    // "Get a quote" buttons preselect the service
+    document.querySelectorAll("[data-need]").forEach(function (a) {
+      a.addEventListener("click", function () { fields[3].value = a.getAttribute("data-need"); update(); });
+    });
 
-    function showSuccess() {
-      if (formView) formView.style.display = "none";
-      if (successView) successView.style.display = "flex";
-    }
+    var formView = $("form-view");
+    var successView = $("success-view");
+    // Formspree reveals [data-fs-success]; swap the whole card when it does.
+    new MutationObserver(function () {
+      if (successView.style.display !== "none" && !successView.hasAttribute("hidden") && formView.style.display !== "none") {
+        formView.style.display = "none";
+        successView.style.display = "flex";
+        var h = successView.querySelector("h3");
+        h.tabIndex = -1;
+        h.focus(); // announce the result to keyboard and screen-reader users
+      }
+    }).observe(successView, { attributes: true });
 
-    function showForm() {
-      if (formView) formView.style.display = "block";
-      if (successView) successView.style.display = "none";
-      if (form) form.reset();
+    $("reset-form").addEventListener("click", function () {
+      successView.style.display = "none";
+      formView.style.display = "block";
+      form.reset();
       update();
-    }
-
-    if (successView && formView) {
-      var observer = new MutationObserver(function () {
-        var isVisible = successView.style.display !== "none" && !successView.hasAttribute("hidden");
-        if (isVisible && formView.style.display !== "none") {
-          showSuccess();
-        }
-      });
-      observer.observe(successView, { attributes: true, attributeFilter: ["style", "class", "hidden"] });
-    }
-
-    if (resetBtn) {
-      resetBtn.addEventListener("click", showForm);
-    }
+    });
   }
 
-  initTheme();
+
+  // --- floating WhatsApp button: one tap opens a service menu, second tap opens WhatsApp ---
+  // Without JS the button is a plain WhatsApp link.
+  function initWhatsAppMenu() {
+    var btn = $("wa-float");
+    var sheet = $("wa-sheet");
+    if (!btn || !sheet) return;
+
+    function setOpen(open) {
+      sheet.hidden = !open;
+      btn.setAttribute("aria-expanded", open);
+      if (open) sheet.querySelector(".wa-options a").focus();
+    }
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      setOpen(sheet.hidden);
+    });
+    $("wa-close").addEventListener("click", function () { setOpen(false); btn.focus(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !sheet.hidden) { setOpen(false); btn.focus(); }
+    });
+    document.addEventListener("click", function (e) {
+      if (!sheet.hidden && !sheet.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+    });
+    sheet.querySelectorAll(".wa-options a").forEach(function (a) {
+      a.addEventListener("click", function () { setOpen(false); });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initThemeToggle();
+    initCall();
+    initTabs();
     initContactForm();
+    initWhatsAppMenu();
   });
 })();
